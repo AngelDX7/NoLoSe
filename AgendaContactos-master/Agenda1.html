@@ -1,0 +1,29 @@
+<script>
+    $(document).ready(function(){
+        $("#btn").click(function(e){
+            // 1. Petición JSON a usuarios.php
+            $.getJSON("usuarios.php", function(response) {
+
+                // Extraer el array de personas. Si no existe, usamos un array vacío.
+                const personas = response.usuarios || [];
+
+                // 2. Usar .map() para transformar el array de datos en un array de strings HTML
+                //    y .join('') para unirlos en una sola cadena HTML.
+                const itemsHTML = personas.map(persona => {
+                    // Usamos Template Literals (comillas invertidas ` `) para interpolar variables (${...})
+                    return `
+                        <li>
+                            <strong>Nombre:</strong> ${persona.nombre}<br>
+                            <strong>Edad:</strong> ${persona.edad}<br>
+                            <strong>Profesión:</strong> ${persona.profesion}<br>
+                            <strong>Ciudad:</strong> ${persona.ciudad}
+                        </li>
+                    `;
+                }).join(''); // Convierte el array de strings HTML en una sola cadena
+
+                // 3. Insertar el HTML generado en el contenedor #lista
+                $("#lista").html(`<ul>${itemsHTML}</ul>`);
+            })
+        });
+    });
+</script>

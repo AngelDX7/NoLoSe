@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practica 3</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+ <h1>Practica 3</h1>
+ <form id="datos">
+    <input type="text" id="nombre" placeholder="Nombre">
+    <input type="text" id="edad" placeholder="Edad">
+    <button type="submit" id="enviar">Enviar</button>
+
+ </form>
+    <div id="resultado"></div>
+
+    <script>
+        $(document).ready(function(){
+            $("#datos").submit(function(){
+                let nombre = $("#nombre").val();
+                let edad = $("#edad").val();
+                $.post(
+                    "procesar.php",{
+                        nombre: nombre,
+                        edad: edad,
+                    },function(respuesta)
+                    {
+                        $("#resultado").html(respuesta);
+                    }
+                )
+
+            });
+        })
+    </script>
+
+
+</body>
+</html>

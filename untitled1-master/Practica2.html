@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practica2</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+    <h1>Enviador de datos</h1>
+    <input type="text" id="nombreImput" placeholder="Nombre">
+    <button id="saludarBtn">Enviar</button>
+    <div id="resultado"></div>
+
+    <script>
+        $(document).ready(function(){
+            $("saludarBtn").on("click", function(){
+                let nombre = $("#nombreImput").val();
+
+                $.get(
+                    "saludo.php",
+                    {nombre: nombre},
+                    function(respuesta){
+                        $("#resultado").html(respuesta);
+                    }
+                )
+            })
+        })
+    </script>
+
+</body>
+</html>

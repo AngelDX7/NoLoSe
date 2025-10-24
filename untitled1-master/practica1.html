@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practíca 1</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Datos de Personas</h1>
+
+    <button id="datosBtn">Cargar datos</button>
+
+    <h2>Lista de personas</h2>
+    <div id="listPersonas">
+
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $("datosBtn").click(function (e) {
+                $.getJSON("datos.json", function (data) {
+                    $.each(data, function (indice, persona) {})
+                    htmlLista += '<li>';
+                    htmlLista += 'Nombre: <Strong>${persona.nombre}</Strong>';
+                    htmlLista += 'Edad: <Strong>${persona.edad}</Strong>';
+                    htmlLista += '<li>';
+
+                })
+            })
+        })
+    </script>
+</body>
+</html>
