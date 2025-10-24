@@ -1,0 +1,14 @@
+.bloque1{
+    width: 100px;
+    height: 100px;
+    background-color: #35d4ca;
+    position: relative;
+    left: 50px;
+}
+.bloque2{
+    width: 100px;
+    height: 100px;
+    background-color: #507beb;
+    position: absolute;
+    top: 80px;
+}

@@ -1,0 +1,12 @@
+.boton{
+    background-color: pink;
+    display: inline-block;
+    width: 100px;
+    height: 50px;
+}
+.boton2{
+    background-color: dodgerblue;
+    display: inline-block;
+    width: 100px;
+    height: 50px;
+}

@@ -1,0 +1,15 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+    background-color: green;
+}
+h2{
+    background-color: green;
+}
+strong{
+    color: blue;
+}
+p{
+    text-align: justify;
+}

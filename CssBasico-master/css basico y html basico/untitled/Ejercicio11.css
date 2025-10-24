@@ -1,0 +1,25 @@
+.bloque1{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background-color: purple;
+    left: 30px;
+    top: 100px;
+    z-index: 1000;
+}
+.bloque2{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background-color: yellow;
+    left: 50px;
+    top: 130px;
+    z-index: 2000;
+}
+.bloque3{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background-color: turquoise;
+    z-index: 3;
+}
